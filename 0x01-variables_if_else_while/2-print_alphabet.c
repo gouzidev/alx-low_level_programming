@@ -11,7 +11,7 @@
 */
 int main(void)
 {
-	char alphabets[] = "abcdefghijklmnopqrstuvwxyz\n";
+	char alphabets[] = "abcdefghijklmnopqrstuvwxyz";
 	int i = 0;
 	int len = sizeof(alphabets) / sizeof(alphabets[0]);
 
