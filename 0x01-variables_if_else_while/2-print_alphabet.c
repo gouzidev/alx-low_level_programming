@@ -12,7 +12,13 @@
 int main(void)
 {
 	char alphabets[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\n";
-	for (int i = 0 ; i < strlen(alphabets) ; i++)
+	int i = 0;
+	int len = sizeof(alphabets) / sizeof(alphabets[0]);
+
+	while (i < len)
+	{
 		putchar(alphabets[i]);
+		i++;
+	}
 	return (0);
 }
