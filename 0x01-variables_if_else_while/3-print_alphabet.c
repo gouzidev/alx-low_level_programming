@@ -14,12 +14,6 @@ int main(void)
 		putchar(l_letter);
 		l_letter++;
 	}
-	l_letter = 65;
-	while (l_letter <= 90)
-	{
-		putchar(l_letter);
-	}
-	putchar('\n');
-
+	putchar("\n");
 	return (0);
 }

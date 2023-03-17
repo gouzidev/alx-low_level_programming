@@ -18,6 +18,7 @@ int main(void)
 	while (l_letter <= 90)
 	{
 		putchar(l_letter);
+		l_letter++;
 	}
 	putchar('\n');
 
