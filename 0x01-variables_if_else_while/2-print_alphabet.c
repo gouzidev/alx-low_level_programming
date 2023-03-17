@@ -17,8 +17,8 @@ int main(void)
 
 	while (i < len)
 	{
-		i++;
 		putchar(alphabets[i]);
+		i++;
 	}
 	return (0);
 }
