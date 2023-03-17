@@ -1,24 +1,20 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <string.h>
-/* more headers goes there */
-/* betty style doc for function main goes there */
+
 /**
-  * main - Entry point
-  * Description:Positive anything is better than negative nothing
-  * Return: 0 (success)
-*/
+* main - Prints alphabets in lowercase
+* Return: 0
+**/
+
 int main(void)
 {
-	char alphabets[] = "abcdefghijklmnopqrstuvwxyz\n";
-	int i = 0;
-	int len = sizeof(alphabets) / sizeof(alphabets[0]);
+	char l_letter;
 
-	while (i < len)
+	for (l_letter = 97; l_letter <= 122; l_letter++)
 	{
-		putchar(alphabets[i]);
-		i++;
+		putchar(l_letter);
 	}
+
+	putchar('\n');
+
 	return (0);
 }
