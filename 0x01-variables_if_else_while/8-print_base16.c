@@ -14,7 +14,7 @@ int main(void)
 		putchar(l_letter);
 		l_letter++;
 	}
-	l_letter = 97
+	l_letter = 97;
 	while (l_letter <= 102)
 	{
 		putchar(l_letter);
