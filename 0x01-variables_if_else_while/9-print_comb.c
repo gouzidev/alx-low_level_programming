@@ -9,10 +9,7 @@ int main(void)
 {
 	int l_letter = 0;
 
-
-
 	while (l_letter <= 9)
-	
 	{	
 		putchar(l_letter + 48);
 		if ( l_letter != 9) 
@@ -23,6 +20,5 @@ int main(void)
 		l_letter++;
 	}
 	putchar(10);
-	
 	return (0);
 }
