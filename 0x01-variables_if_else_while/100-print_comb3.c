@@ -20,8 +20,8 @@ int main(void)
 				if ( (i * 10) + j != 89)
 				{
 					putchar(44);
+					putchar(32);
 				}
-				putchar(32);
 			}
 		}
 	}
