@@ -18,10 +18,10 @@ int main(void)
 				putchar(i + 48);
 				putchar(j + 48);
 				putchar(32);
-			}
-			if ((i * 10) + (j * 10) != 89)
-			{
-				putchar(44);
+				if ((i * 10) + (j * 10) != 89)
+				{
+					putchar(44);
+				}
 			}	
 		}
 	}
