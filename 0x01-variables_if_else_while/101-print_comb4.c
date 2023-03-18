@@ -15,12 +15,12 @@ int main(void)
 		{
 			for (k = 0; k <= 9; k++)
 			{
-				if (i != j && i!= k && i < j && j != k && j < k)
+				if (i != j && i != k && i < j && j != k && j < k)
 				{
 					putchar(i + 48);
 					putchar(j + 48);
 					putchar(k + 48);
-					if ((i * 100) + (j*10) + k != 789)
+					if ((i * 100) + (j * 10) + k != 789)
 					{
 						putchar(44);
 						putchar(32);
