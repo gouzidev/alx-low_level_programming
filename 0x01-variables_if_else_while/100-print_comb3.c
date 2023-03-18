@@ -19,6 +19,10 @@ int main(void)
 				putchar(j + 48);
 				putchar(32);
 			}
+			if (i != 8 && j != 9)
+			{
+				putchar(44);
+			}	
 		}
 	}
 	return (0);
