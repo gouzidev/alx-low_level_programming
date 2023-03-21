@@ -1,5 +1,12 @@
 #include "main.h"
 
+int printer(char *str);
+
+/**
+* main - Prints alphabets in lowercase
+* Return: 0
+**/
+
 int main(void)
 {
 	printer("_putchar");
