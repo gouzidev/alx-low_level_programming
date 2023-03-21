@@ -1,19 +1,20 @@
-#include "main.h"
+#include <main.h>
+void _putchar(char c)
+{
+	putchar(c);
+	return (0);
+}
 
-int printer(char *str);
-
-/**
-* main - Prints alphabets in lowercase
-* Return: 0
-**/
 
 int main(void)
 {
-	printer("_putchar");
+	char str[] = "_putchar";
+	int i = 0;
+
+	while (str[i] != '\0')
+	{
+		_putchar(str[i]);
+	}
+	_putchar('\n');
 	return (0);
 }
-/**
-* printer - prints my strings
-* Description: displays str using for loop and putchar
-* #str: string to give the function
-**/
