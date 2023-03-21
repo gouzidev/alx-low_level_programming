@@ -1,4 +1,4 @@
-int printer(char[] str)
+int printer(char str[])
 {
 	int i = 0;
 
