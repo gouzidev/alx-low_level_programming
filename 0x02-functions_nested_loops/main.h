@@ -1,3 +1,12 @@
-#include <stdio.h>
+void print_alphabet(void)
+{
+	char i = 97;
 
-void print_alphabet(void);
+	while (i < 123)
+	{
+		putchar(i);
+		i++;
+	}
+	putchar('\n');
+	return;
+}
