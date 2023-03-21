@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include "main.h"
 int printer(char *str);
 
 /**
@@ -16,13 +16,4 @@ int main(void)
 * printer - prints my strings
 * Description: displays str using for loop and putchar
 * #str: string to give the function
-* Return: 0
 **/
-int printer(char *str)
-{
-	for (int i = 0; i < sizeof(str) / sizeof(str[0]); i++)
-	{
-		putchar(str[i]);
-	}
-	return (0);
-}
