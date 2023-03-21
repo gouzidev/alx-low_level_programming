@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-int printer(char* str)
+int printalpha()
 {
-	int i = 0;
+	char i = 97;
 
-        while (str[i] != '\0')
+        while (i < = 123)
 	{
-                putchar(str[i]);
+                putchar(i);
 		i++;
 	}
 	putchar('\n');
