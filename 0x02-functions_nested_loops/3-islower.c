@@ -3,11 +3,10 @@
 #include <ctype.h>
 
 /**
- * Description : idk lol
- * _islower - check the code.
- * @c : param given of tyope char
- * Return: Always 0.
- */
+  * _islower -  function that checks for lowercase character.
+  *  @c: char type letter
+  * Return: 1 or 0
+  */
 
 int _islower(int c)
 {
