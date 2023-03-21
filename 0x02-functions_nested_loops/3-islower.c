@@ -3,6 +3,7 @@
 #include <ctype.h>
 
 /**
+ * Description : idk lol
  * main - check the code.
  * @c : param given of tyope char
  * Return: Always 0.
