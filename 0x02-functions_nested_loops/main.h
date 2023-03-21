@@ -7,5 +7,6 @@ int printer(char* str)
                 putchar(str[i]);
 		i++;
 	}
+	putchar("\n");
         return (0);
 }
