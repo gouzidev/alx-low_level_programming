@@ -4,7 +4,7 @@ int printalpha()
 {
 	char i = 97;
 
-        while (i < = 123)
+        while (i < 123)
 	{
                 putchar(i);
 		i++;
