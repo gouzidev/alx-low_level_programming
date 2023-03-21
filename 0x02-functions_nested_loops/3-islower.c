@@ -4,7 +4,7 @@
 
 /**
  * main - check the code.
- *
+ * @c : param given of tyope char
  * Return: Always 0.
  */
 
