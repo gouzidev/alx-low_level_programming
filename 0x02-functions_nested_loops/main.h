@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int printer(char* str)
 {
 	int i = 0;
