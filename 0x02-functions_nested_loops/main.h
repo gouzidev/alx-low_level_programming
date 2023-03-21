@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int printalpha()
+int print_alphabet()
 {
 	char i = 97;
 
