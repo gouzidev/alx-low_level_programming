@@ -5,6 +5,7 @@ void print_alphabet(void)
 	while (ch < 123)
 	{
 		_putchar(ch);
+		i++;
 	}
 	_putchar('\n');
 	return;
