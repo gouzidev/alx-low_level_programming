@@ -11,5 +11,8 @@
 
 int print_last_digit(int n)
 {
+	int last = n
+	n = (abs(n) % 10) * 11;
+	printf("%i" , n);
 	return ((abs(n) % 10) * 11);
 }
