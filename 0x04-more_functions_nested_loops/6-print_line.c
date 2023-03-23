@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_lines - oco
+ * print_line - oco
  * @n: number of lines in int
  * Description: Uses stuf
  * Return: void. no return
 **/
 
-void print_lines(int n)
+void print_line(int n)
 {
 	int i;
 
