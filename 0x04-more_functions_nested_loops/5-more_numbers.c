@@ -1,18 +1,33 @@
 #include "main.h"
 
 /**
- * print_numbers - oco
- * Return: void
+ * print_most_numbers - oco
+ * Description: Uses stuf
+ * Return: void. no return
 **/
 
-void print_numbers(void)
+void print_most_numbers(void)
 {
-	int i = 48;
-
-	while (i < 58)
+	int i, j, res;
+	
+	i = 0;
+	while (i < 10)
 	{
-		_putchar(i);
-		i++;
+		j = 0;
+		while (j < 15)
+		{
+			if (j > 9)
+			{
+				res = '1' + ((j + 48) % 48);
+			}
+			else
+			{
+				res = (j + 48) % 48;
+			}
+			_putchar(res);
+		j++;
+		}
+	i++;
 	}
-	_putchar(10);
+	_putchar('\n');
 }
