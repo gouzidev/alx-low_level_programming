@@ -2,7 +2,8 @@
 
 /**
  * print_most_numbers - oco
- * Return: void
+ * Description: Uses stuf
+ * Return: void. no return
 **/
 
 void print_most_numbers(void)
