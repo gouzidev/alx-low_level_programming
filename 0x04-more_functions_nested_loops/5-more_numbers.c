@@ -19,12 +19,10 @@ void print_most_numbers(void)
 		if (j > 9)
 		{
 			_putchar('1');
-			_putchar((((j % 10) % 48) + 48));
+			_putchar((j % 10) + '0');
 		}
-		else
-		{
-			_putchar( (j % 48) + 48);
-		}
+		_putchar( (j % 48) + 48);
+		
 		j++;
 	}
 	i++;
