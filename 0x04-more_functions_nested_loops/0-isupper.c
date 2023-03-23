@@ -1,6 +1,12 @@
 #include <ctype.h>
 #include "main.h"
 
+/**
+ * _isupper - oco
+ * @c: the character
+ * Return: 0
+**/
+
 int _isupper(int c)
 {
 	if (isupper(c))
