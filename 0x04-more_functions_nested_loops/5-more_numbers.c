@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _most_numbers - oco
+ * most_numbers - oco
  * Description: Uses stuf
  * Return: void. no return
 **/
