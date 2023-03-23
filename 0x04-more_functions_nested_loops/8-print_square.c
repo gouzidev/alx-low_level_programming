@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_size - oco
+ * print_square - oco
  * @size: size
  * Description: Uses stuf
  * Return: void. no return
 **/
 
-void print_size(int size)
+void print_square(int size)
 {
 	int i, j;
 
