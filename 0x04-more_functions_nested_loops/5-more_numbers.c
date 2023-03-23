@@ -9,25 +9,25 @@
 void print_most_numbers(void)
 {
 	int i, j, res;
-	
-	i = 0;
+
+    	i = 0;
 	while (i < 10)
 	{
-		j = 0;
-		while (j < 15)
+	j = 0;
+	while (j <= 14)
+	{
+		if (j > 9)
 		{
-			if (j > 9)
-			{
-				res = '1' + ((j + 48) % 48);
-			}
-			else
-			{
-				res = (j + 48) % 48;
-			}
-			_putchar(res);
-		j++;
+			_putchar('1');
+			_putchar((((j % 10) % 48) + 48));
 		}
-	i++;
+		else
+		{
+			_putchar( (j % 48) + 48);
+		}
+		j++;
 	}
+	i++;
 	_putchar('\n');
+	}
 }
