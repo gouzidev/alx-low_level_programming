@@ -6,7 +6,7 @@
  * Return: void. no return
 **/
 
-void main(void)
+int main(void)
 {
 	int i = 1;
 
@@ -34,6 +34,6 @@ void main(void)
 		}
 		i++;
 	}
-	printf("\n");
+	putchar('\n';
 	return (0);
 }
