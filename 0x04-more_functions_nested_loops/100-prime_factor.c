@@ -13,7 +13,7 @@
 * Math concept here, don’t need to check full length
 * saves lots of time to log n I think. This is a hard concept
 * UPDATE: After test cases, i changed it from number > sqrt to
-* number > i because some small test cases did not pass 
+* number > i because some small test cases did not pass
 * But with the change it should work
 * C: If the current number can be modulo’d by i, check if i is bigger
 * than biggest. We then chunk the number by the i, reducing it and
