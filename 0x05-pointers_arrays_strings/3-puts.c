@@ -4,7 +4,7 @@
 
 /**
  * _puts - oco
- * @str : pointer
+ * @s : pointer
  * Description: Uses stuf
  * Return: void.
 **/
