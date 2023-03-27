@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * print_most_numbers - oco
+ * reset_to_98 - oco
+ * @n : pointer
  * Description: Uses stuf
  * Return: void. no return
 **/
