@@ -9,7 +9,7 @@
  * Return: void.
 **/
 
-int _puts(char *s)
+void _puts(char *s)
 {
 	puts(s);
 }
