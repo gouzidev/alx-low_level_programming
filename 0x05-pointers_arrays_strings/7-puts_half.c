@@ -24,6 +24,10 @@ void puts_half(char *str)
 	{
 		halfLen = (len - 1) / 2;
 	}
+	if (str[len-1] == '\0')
+	{
+		len--;
+	}
 	for (i = halfLen; i < len; i++)
 	{
 		printf("%c", str[i]);
