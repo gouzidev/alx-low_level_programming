@@ -12,9 +12,9 @@
 
 void puts_half(char *str)
 {
-	int i;
-	int halfLen;
-	int len = strlen(str);
+	unsigned int i;
+	unsigned int halfLen;
+	unsigned int len = strlen(str);
 
 	if ((len % 2) == 0)
 	{
