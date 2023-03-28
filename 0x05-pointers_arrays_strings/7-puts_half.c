@@ -1,4 +1,6 @@
 #include "main.h"
+#include <string.h>
+#include <stdio.h>
 
 /**
  * puts_half - prints every other character of a string
