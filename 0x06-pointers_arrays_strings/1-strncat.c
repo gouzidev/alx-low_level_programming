@@ -1,32 +1,26 @@
-#include "main.h"
-
+#include "holberton.h"
 /**
- * _strncat - concatanates two string
- * @dest: the destination (wil change)
- * @src: what we will add to dest
- * @n: number
- * Description: man idk its obvious
- * Return: pointer to the dest
-**/
-
+ * *_strncat - appends the src string to the dest string
+ *
+ * @dest: char to check
+ * @src: char to check
+ * @n: number of bytes from src
+ * Description: This will append the src string to the dest string
+ * Return: a pointer to the resulting string dest
+ */
 char *_strncat(char *dest, char *src, int n)
 {
-	size_t counter = 0;
+	int a, b, largosrc;
 
-	int i = 0, j = 0;
-
-	while (dest[i])
+	for (a = 0; dest[a] != '\0'; a++)
 	{
-		i++;
 	}
-	while (src[j] && counter < n)
+	for (largosrc = 0; src[largosrc] != 0; largosrc++)
 	{
-		dest[i] = src[j];
-		j++;
-		i++;
-		counter++;
 	}
-	dest[i] = '\0';
-
+	for (b = 0; b < n && b < largosrc; b++, a++)
+	{
+		dest[a] = src[b];
+	}
 	return (dest);
 }
