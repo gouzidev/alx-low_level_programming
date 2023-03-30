@@ -1,28 +1,28 @@
 #include "main.h"
-
 /**
- * _strncpy - concatanates two string
- * @dest: the destination (wil change)
- * @src: what we will add to dest
- * @n: number
- * Description: man idk its obvious
- * Return: pointer to the dest
-**/
-
+ * _strncpy - copy a string
+ * @dest: input value
+ * @src: input value
+ * @n: input value
+ *
+ * Return: dest
+ */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i;
+	int j;
 
 	j = 0;
-	while (i < n && src[i] != '\0')
+	while (j < n && src[j] != '\0')
 	{
-		dest[i] = src[i];
-		i++;
+		dest[j] = src[j];
+		j++;
 	}
-	while (i < n)
+	while (j < n)
 	{
-		dest[i] = '\0';
-		i++;
+		dest[j] = '\0';
+		j++;
 	}
+
 	return (dest);
 }
+
