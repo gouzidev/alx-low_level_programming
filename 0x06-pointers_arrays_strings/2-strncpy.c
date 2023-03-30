@@ -9,7 +9,7 @@
  * Return: pointer to the dest
 **/
 
-char *_strncat(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
 	size_t counter = 0;
 
