@@ -12,7 +12,7 @@
 char *_strchr(char *s, char c)
 {
 	char *ptr = s;
-	
+
 	while (*ptr != '\0')
 	{
 		if (*ptr == c)
@@ -25,5 +25,6 @@ char *_strchr(char *s, char c)
 	if (*ptr == c)
 	{
 		return (s);
+	}
 	return (NULL);
 }
