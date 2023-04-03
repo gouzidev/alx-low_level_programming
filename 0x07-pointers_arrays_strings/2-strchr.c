@@ -11,19 +11,19 @@
 
 char *_strchr(char *s, char c)
 {
-	if (s == NULL)
-	{
-		return NULL;
-	}
 	char *ptr = s;
 	
 	while (*ptr != '\0')
 	{
+		if (*ptr == c)
+		{
+			return (ptr);
+		}
+		ptr++;
+	}
+
 	if (*ptr == c)
 	{
-		return ptr;
-	}
-	ptr++;
-	}
-	return NULL;
+		return (s);
+	return (NULL);
 }
