@@ -1,22 +1,21 @@
-include "main.h"
-
+#include "main.h"
 /**
- * _memset - fills memory with a constant byte
- *
- * @s: char to check
- * @b: char to check
- * @n: unsigned int to check
- *
- * Return: to char
- */
+  * _memset - fills memory with a contant byte.
+  * @s: buffer
+  * @b: contant byte
+  * @n: number of bytes to fill
+  * Return: pointer
+  */
+
 char *_memset(char *s, char b, unsigned int n)
 {
+
 	char *p = s;
 
-	while (n > 0)
+	while (n-- > 0)
 	{
 		*p++ = b;
-		n--;
 	}
+
 	return (s);
 }
