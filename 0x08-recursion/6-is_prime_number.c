@@ -13,7 +13,7 @@ int prime_n_helper(int n, int i)
 		return (1);
 	if (n % i == 0)
 		return (0);
-	return (is_prime_number(n, i - 1);
+	return (prime_n_helper(n, i - 1);
 }
 
 /**
