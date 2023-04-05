@@ -9,19 +9,10 @@
 
 int prime_n_helper(int n, int i)
 {
-if (n < 4)
-{
-return (0);
-}
-if (n == i)
-{
-return (1);
-}
-if (((n / (i * i)) == 1) && ((i * (n / i)) == n))
-{
-return (0);
-}
-prime_n_helper(n, ++i);
+	if (i == 1)
+		return (1);
+	if (n % i == 0)
+		return (0);
 }
 
 /**
@@ -32,5 +23,7 @@ prime_n_helper(n, ++i);
 
 int is_prime_number(int n)
 {
-return (prime_n_helper(n, 2));
+	if (n <= 1)
+		return (0);
+	return (prime_n_helper(n, 2));
 }
