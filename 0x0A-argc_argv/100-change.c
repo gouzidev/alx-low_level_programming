@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include <ctype.h>
 
+/**
+* main - Entry point
+* @argc: str 1
+* @argv: str 2
+* Return: 0
+*/
+
 int main(int argc, char *argv[])
 {
 int n;
@@ -37,6 +44,6 @@ sum += n / 2;
 n = n % 2;
 }
 sum += n;
-printf("%d",sum);
+printf("%d", sum);
 return (0);
 }
