@@ -22,7 +22,7 @@ return (1);
 
 n = atoi(argv[argc - 1]);
 
-if(n < 0)
+if (n < 0)
 {
 printf("%d\n", 0);
 return (0);
