@@ -44,6 +44,6 @@ sum += n / 2;
 n = n % 2;
 }
 sum += n;
-printf("%d", sum);
+printf("%d\n", sum);
 return (0);
 }
