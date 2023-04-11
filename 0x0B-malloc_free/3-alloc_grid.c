@@ -21,7 +21,6 @@ arr[i][j] = i * j;
 }
 }
 
-// free the memory
 for (i = 0; i < width; i++) {
 free(arr[i]);
 }
