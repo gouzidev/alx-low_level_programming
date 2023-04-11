@@ -1,39 +1,51 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
 #include "main.h"
-
+#include <stdlib.h>
 /**
- *_strdup - allocate a string.
- *@str: string.
- *Return: pointer to string if success.
-*/
+* str_concat - get ends of input and add together for size
+* @s1: input one to concat
+* @s2: input two to concat
+* Return: concat of s1 and s2
+**/
 
-char *_strdup(char *str)
+char *str_concat(char *s1, char *s2)
 {
-	int i;
-	char *str1;
+char *conct;
+int i, j;
 
-	if (str == NULL)
-	{
-		return (NULL);
-	}
 
-	for (i = 0; str[i]; i++)
-	{
-		i++;
-	}
-	str1 = malloc(sizeof(char) * (i + 1));
-
-	if (str1 == NULL)
-	{
-		return (NULL);
-	}
-
-	for (i = 0; str[i] != '\0'; i++)
-	{
-		str1[i] = str[i];
-	}
-	str1[i] = '\0';
-	return (str1);
+if (s1 == NULL)
+{
+s1 = "";
+}
+if (s2 == NULL)
+{
+s2 = "";
+}
+i = j = 0;
+while (s1[i] != '\0')
+{
+i++;
+}
+while (s2[j] != '\0')
+{
+j++;
+}
+conct = malloc(sizeof(char) * (i + j + 1));
+if (conct == NULL)
+{
+return (NULL);
+}
+i = j = 0;
+while (s1[i] != '\0')
+{
+conct[i] = s1[i];
+i++;
+}
+while (s2[j] != '\0')
+{
+conct[i] = s2[j];
+i++, j++;
+}
+conct[i] = '\0';
+return (conct);
 }
