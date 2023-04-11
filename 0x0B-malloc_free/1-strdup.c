@@ -4,55 +4,36 @@
 #include "main.h"
 
 /**
-* _strlen - creates an array of chars and initializes it
-* @str: the size that main function sends us
-*
-* Description: use malloc and argc argv to achieve goal
-*       returns null if size is zero. returns a
-*       pointer to the array or NULL if it fails.
-* Return: the pointer if successful, NULL if not
-*/
-
-int _strlen(char *str)
-{
-int i = 0;
-while (*str != '\0')
-{
-str++;
-i++;
-}
-return (i);
-}
-
-/**
-* _strdup - creates an array of chars and initializes it
-* @str: the size that main function sends us
-*
-* Description: use malloc and argc argv to achieve goal
-*       returns null if size is zero. returns a
-*       pointer to the array or NULL if it fails.
-* Return: the pointer if successful, NULL if not
+ *_strdup - allocate a string.
+ *@str: string.
+ *Return: pointer to string if success.
 */
 
 char *_strdup(char *str)
 {
-	char *p;
-	char *initialP = str;
+	int i;
+	char *str1;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	p = (char *) malloc((_strlen(str) + 1) * sizeof(str[0]));
-	if (p == NULL)
+
+	for (i = 0; str[i]; i++)
+	{
+		i++;
+	}
+	str1 = malloc(sizeof(char) * i);
+
+	if (str1 == NULL)
 	{
 		return (NULL);
 	}
-	while (*str)
+
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		*p = *str;
-		p++;
-		str++;
+		str1[i] = str[i];
 	}
-	return (initialP);
+	str1[i] = '\0';
+	return (str1);
 }
