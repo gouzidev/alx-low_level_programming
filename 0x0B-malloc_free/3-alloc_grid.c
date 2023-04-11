@@ -8,24 +8,26 @@
 **/
 
 int **alloc_grid(int width, int height)
-if (width * height <= 0)
 {
+if (width <= 0 || height <= 0) {
 return (NULL);
 }
-int **twoDArr = malloc(height * sizeof(int *));
-if (twoDArr == NULL)
+int **grid = malloc(height * sizeof(int *));
+if (grid == NULL)
 {
 return (NULL);
 }
 for (int i = 0; i < height; i++) {
-twoDArr[i] = calloc(width, sizeof(int));
-if (twoDArr[i] == NULL) {
+grid[i] = calloc(width, sizeof(int));
+if (grid[i] == NULL) {
 for (int j = 0; j < i; j++) {
-free(twoDArr[j]);
+free(grid[j]);
 }
-free(twoDArr);
+free(grid);
 return (NULL);
 }
 }
-return (twoDArr);
+return (grid);
 }
+
+
