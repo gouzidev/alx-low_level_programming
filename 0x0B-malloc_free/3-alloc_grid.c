@@ -13,7 +13,8 @@ int **grid = malloc(height * sizeof(int *));
 int i = 0;
 int j = 0;
 
-if (width <= 0 || height <= 0) {
+if (width <= 0 || height <= 0)
+{
 return (NULL);
 }
 if (grid == NULL)
@@ -23,7 +24,7 @@ return (NULL);
 for (i = 0; i < height; i++)
 {
 grid[i] = calloc(width, sizeof(int));
-if (grid[i] == NULL)
+if (grid[i] == NULL || grid == NULL)
 {
 for (j = 0; j < i; j++)
 {
