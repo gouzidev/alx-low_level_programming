@@ -20,12 +20,6 @@ for (j = 0; j < height; j++) {
 arr[i][j] = i * j;
 }
 }
- for (i = 0; i < width; i++) {
-for (j = 0; j < height; j++) {
-printf("%d ", arr[i][j]);
-}
-printf("\n");
-}
 
 // free the memory
 for (i = 0; i < width; i++) {
