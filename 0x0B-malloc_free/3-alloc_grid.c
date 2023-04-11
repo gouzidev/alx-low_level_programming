@@ -6,40 +6,32 @@
 * @height: input two to concat
 * Return: concat of s1 and s2
 **/
-
 int **alloc_grid(int width, int height)
 {
-int **grid = malloc(height * sizeof(int *));
 int i = 0;
 int j = 0;
-
-if (width <= 0 || height <= 0)
+int **arr = (int **)malloc(width * sizeof(int *));
+for (i = 0; i < 3; i++)
 {
-return (NULL);
+arr[i] = (int *)malloc(height * sizeof(int));
 }
-if (grid == NULL)
-{
-return (NULL);
-}
-for (i = 0; i < height; i++)
-{
-grid[i] = calloc(width, sizeof(int));
-if (grid[i] == NULL || grid == NULL)
-{
-for (j = 0; j < i; j++)
-{
-free(grid[j]);
-}
-free(grid);
-return (NULL);
+for (i = 0; i < width; i++) {
+for (j = 0; j < height; j++) {
+arr[i][j] = i * j;
 }
 }
-for (i = 0; i < height; i++)
-{
-free(grid[i]);
+ for (i = 0; i < width; i++) {
+for (j = 0; j < height; j++) {
+printf("%d ", arr[i][j]);
 }
-free(grid);
-return (grid);
+printf("\n");
 }
 
+// free the memory
+for (i = 0; i < width; i++) {
+free(arr[i]);
+}
+free(arr);
 
+return (0);
+}
