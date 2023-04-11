@@ -36,24 +36,23 @@ return (i);
 
 char *_strdup(char *str)
 {
-char *p;
-char *initialP = str;
+	char *p;
+	char *initialP = str;
 
-if (str == NULL)
-{
-return (NULL);
-}
-p = (char *) malloc((_strlen(str) + 1) * sizeof(str[0]));
-if (p == NULL)
-{
-return (NULL);
-}
-while (*str)
-{
-*p = *str;
-p++;
-str++;
-}
-p = initialP;
-return (initialP);
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	p = (char *) malloc((_strlen(str) + 1) * sizeof(str[0]));
+	if (p == NULL)
+	{
+		return (NULL);
+	}
+	while (*str)
+	{
+		*p = *str;
+		p++;
+		str++;
+	}
+	return (initialP);
 }
