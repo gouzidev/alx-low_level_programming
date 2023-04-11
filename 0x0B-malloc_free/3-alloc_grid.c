@@ -1,30 +1,43 @@
 #include "main.h"
-#include <stdlib.h>
 /**
-* alloc_grid - get ends of input and add together for size
-* @width: input one to concat
-* @height: input two to concat
-* Return: concat of s1 and s2
-**/
+ * alloc_grid - allocates a grid, make space and free space
+ * @width: takes in width of grid
+ * @height: height of grid
+ * Return: grid with freed spaces
+ */
+
 int **alloc_grid(int width, int height)
 {
-int i = 0;
-int j = 0;
-int **arr = (int **)malloc(width * sizeof(int *));
-for (i = 0; i < 3; i++)
+/*Declaring variables*/
+int **grid;
+int i, j;
+
+if (width <= 0 || height <= 0)
 {
-arr[i] = (int *)malloc(height * sizeof(int));
-}
-for (i = 0; i < width; i++) {
-for (j = 0; j < height; j++) {
-arr[i][j] = i * j;
-}
+return (NULL);
 }
 
-for (i = 0; i < width; i++) {
-free(arr[i]);
-}
-free(arr);
+grid = malloc(sizeof(int *) * height); /*malloc*/
 
-return (0);
+if (grid == NULL)
+{
+return (NULL);
+}
+
+for (i = 0; i < height; i++)
+{
+grid[i] = malloc(sizeof(int) * width);
+if (grid[i] == NULL)
+{
+for (i = i - 1; i >= 0; i--)
+{
+free(grid[i]);
+}
+free(grid);
+return (NULL);
+}
+}
+for (i = 0; j < width; j++)
+grid[i][j] = 0;
+return (grid);
 }
