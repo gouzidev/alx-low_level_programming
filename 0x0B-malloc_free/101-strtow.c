@@ -8,9 +8,11 @@
  */
 int words_len(char *str)
 {
+int i;
+
 int flag = 0, word_count = 0;
 
-for (int i = 0; str[i] != '\0'; i++)
+for (i = 0; str[i] != '\0'; i++)
 {
 if (str[i] == ' ')
 flag = 0;
@@ -34,7 +36,14 @@ char **strtow(char *str)
 if (str == NULL || *str == '\0')
 return (NULL);
 
-int str_len = 0, word_count = 0, i = 0, k = 0, c = 0, start = 0, end = 0;
+int str_len = 0;
+int word_count = 0;
+int i = 0;
+int j = 0;
+int k = 0;
+int c = 0;
+int start = 0;
+int end = 0;
 char **arr, *x;
 
 while (str[str_len] != '\0')
@@ -59,7 +68,7 @@ x = malloc(sizeof(char) * (c + 1));
 if (x == NULL)
 return (NULL);
 
-for (int j = start; j < end; j++)
+for (j = start; j < end; j++)
 x[j-start] = str[j];
 
 x[c] = '\0';
