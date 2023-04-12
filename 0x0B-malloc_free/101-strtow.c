@@ -33,9 +33,6 @@ return (word_count);
  */
 char **strtow(char *str)
 {
-if (str == NULL || *str == '\0')
-return (NULL);
-
 int str_len = 0;
 int word_count = 0;
 int i = 0;
@@ -45,6 +42,9 @@ int c = 0;
 int start = 0;
 int end = 0;
 char **arr, *x;
+
+if (str == NULL || *str == '\0')
+return (NULL);
 
 while (str[str_len] != '\0')
 str_len++;
