@@ -1,18 +1,31 @@
 #include <stdio.h>
+		
 #include <stdlib.h>
+		
 #include "main.h"
+		
 /**
- * free_grid - allocates a arr, make space and free space
- * @grid: test
- * @height: height of arr
- * Return: arr with freed spaces
+		
+ * free_grid - frees 2d array
+		
+ * @grid: 2d grid
+		
+ * @height: height dimension of grid
+		
+ * Description: frees memory of grid
+		
+ * Return: nothing
+		
+ *
+		
  */
+
 
 void free_grid(int **grid, int height)
 {
-int i = 0;
+int i;
 
-while (i < height)
+for (i = 0; i < height; i++)
 {
 free(grid[i]);
 }
