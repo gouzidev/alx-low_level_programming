@@ -1,74 +1,43 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "main.h"
 
 /**
- * _strlen - oco
- * @str : pointer
- * Description: Uses stuf
- * Return: void.
-**/
-
-int _strlen(char *str)
-{
-  int i = 0;
-  while (str[i])
-  {
-    i++;
-  }
-  return i;
-}
-
-/**
- * _string_nconcat - oco
- * @s1 : pointer
- * @s2 : pojner
- * @n: plyaer
- * Description: Uses stuf
- * Return: void.
-**/
-
+ * string_nconcat - Concatenfirst n characters of s2.
+ * @s1: First string.
+ * @s2: Second string.
+ * @n: Maximum number of characters to concatenate from s2.
+ *
+ * Return: Pointer to a newly allocated space in memory string.
+ * If memory allocation fails, returns NULL.
+ */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-unsigned int lens1;
-unsigned int lens2;
-unsigned int i = 0; 
-unsigned int j = 0; 
-char *ptr;
+char *result;
+unsigned int len1 = 0, len2 = 0, i;
 
 if (s1 == NULL)
-{
-s1 = ""; 
-}
+s1 = "";
 if (s2 == NULL)
-{
-s2 = ""; 
-}
-lens1 = _strlen(s1);
-lens2 = _strlen(s2);
+s2 = "";
 
-if (lens2 <= n)
-{
-n = lens2;
-}
+while (s1[len1] != '\0')
+len1++;
+while (s2[len2] != '\0')
+len2++;
 
-ptr = malloc(n + lens1 + 1);
+if (n > len2)
+n = len2;
 
-if (ptr == NULL)
+result = malloc((len1 + n + 1) * sizeof(char));
+if (result == NULL)
 return (NULL);
 
-while (s1[i])
-{
-ptr[i] = s1[i];
-printf("ptr => %c\n", ptr[i]);
-i++;
-}
-while (j < n)
-{
-ptr[i] = s2[j];
-printf("ptr => %c\n", ptr[i]);
-j++;
-i++;
-}
-ptr[i] = '\0';
-return (ptr);
+for (i = 0; i < len1; i++)
+result[i] = s1[i];
+
+for (; i < (len1 + n); i++)
+result[i] = s2[i - len1];
+
+result[i] = '\0';
+
+return (result);
 }
