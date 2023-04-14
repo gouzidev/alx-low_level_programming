@@ -8,33 +8,28 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-void *p;
+void *member;
+char *param;
+unsigned int index;
 
-if (!nmemb || !size)
-return (NULL);
-p = malloc(size * nmemb);
-if (!p)
+if (size <= 0 || nmemb == 0)
 {
 return (NULL);
 }
-_memset(p, 0, (nmemb * size));
-return (p);
+
+member = malloc(size * nmemb);
+
+if (member == NULL)
+{
+return (NULL);
 }
 
-/**
- * _memset - fills memory with a constant byte
- * @s: memory area
- * @b: constant byte
- * @n: bytes of the memory area
- * Return: pointer to the memory area s
- */
-char *_memset(char *s, char b, unsigned int n)
-{
-char *p = s;
+param = member;
 
-while (n)
-*s = b;
-s++;
-n--;
-return (p);
+for (index = 0; index < (size * nmemb); index++)
+{
+param[index] = '\0';
+}
+
+return (member);
 }
