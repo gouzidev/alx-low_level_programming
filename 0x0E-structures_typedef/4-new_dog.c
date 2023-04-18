@@ -10,40 +10,32 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-int name_r = 0, owner_r = 0;
-dog_t *new_dog = malloc(sizeof(dog_t));
+	int namerunner, ownerrunner;
+	dog_t *new_dog = malloc(sizeof(dog_t));
 
-if (new_dog == NULL)
-return (new_dog);
-while (name[name_r])
-name_r++;
-while (owner[owner_r])
-{
-	owner_r++;
-}
-new_dog->name =  malloc(sizeof(char) * (name_r + 1));
-new_dog->owner = malloc(sizeof(char) * (owner_r + 1));
-if (new_dog->name == NULL || new_dog->owner == NULL)
-{
-free(new_dog->name);
-free(new_dog->owner);
-free(new_dog);
-return (NULL);
-}
-name_r = 0;
-while (name[name_r])
-{
-new_dog->name[name_r] = name[name_r];
-name_r++;
-}
-owner_r = 0;
-while (name[name_r])
-{
-new_dog->owner[owner_r] = owner[owner_r];
-owner_r++;
-}
-new_dog->name[name_r] = 0;
-new_dog->owner[owner_r] = 0;
-new_dog->age = age;
-return (new_dog);
+	if (new_dog == NULL)
+		return (new_dog);
+	for (namerunner = 0; name[namerunner]; namerunner++)
+	{
+	}
+	for (ownerrunner = 0; owner[ownerrunner]; ownerrunner++)
+	{
+	}
+	new_dog->name = malloc((namerunner + 1) * sizeof(char));
+	new_dog->owner = malloc((ownerrunner + 1) * sizeof(char));
+	if (new_dog->name == NULL || new_dog->owner == NULL)
+	{
+		free(new_dog->name);
+		free(new_dog->owner);
+		free(new_dog);
+		return (NULL);
+	}
+	for (namerunner = 0; name[namerunner]; namerunner++)
+		new_dog->name[namerunner] = name[namerunner];
+	for (ownerrunner = 0; owner[ownerrunner]; ownerrunner++)
+		new_dog->owner[ownerrunner] = owner[ownerrunner];
+	new_dog->name[namerunner] = 0;
+	new_dog->owner[ownerrunner] = 0;
+	new_dog->age = age;
+	return (new_dog);
 }
