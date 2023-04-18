@@ -18,11 +18,13 @@ dog_t *new_dog = malloc(sizeof(dog_t));
 if (new_dog == NULL)
 return (new_dog);
 name_r = 0;
-while (name[name_r]) {
+while (name[name_r])
+{
 name_r++;
 }
 owner_r = 0;
-while (owner[owner_r]) {
+while (owner[owner_r])
+{
 owner_r++;
 }
 new_dog->name = malloc((name_r + 1) * sizeof(char));
@@ -35,12 +37,14 @@ free(new_dog);
 return (NULL);
 }
 name_r = 0;
-while (name[name_r]) {
+while (name[name_r])
+{
 new_dog->name[name_r] = name[name_r];
 name_r++;
 }
 owner_r = 0;
-while (owner[owner_r]) {
+while (owner[owner_r])
+{
 new_dog->owner[owner_r] = owner[owner_r];
 owner_r++;
 }
