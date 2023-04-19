@@ -13,7 +13,7 @@
 
 int main(char argc, char *argv[])
 {
-int n_bytes = atoi(argv[1]);
+int n_bytes;
 int i = 0;
 
 if (argc != 2)
@@ -21,6 +21,7 @@ if (argc != 2)
 printf("Error\n");
 exit(1);
 }
+n_bytes = atoi(argv[1]);
 if (n_bytes < 0)
 {
 printf("Error\n");
