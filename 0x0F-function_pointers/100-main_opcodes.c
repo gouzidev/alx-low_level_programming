@@ -28,7 +28,7 @@ exit(2);
 }
 while (i < n_bytes)
 {
-printf("%02hhx", main + i);
+printf("%02hhx", *((char *)(main + i)));
 i++;
 if (i != n_bytes)
 {
