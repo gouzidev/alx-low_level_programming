@@ -17,20 +17,15 @@ va_list vl;
 char *s;
 
 va_start(vl, n);
-/* I run trough the s to know which are the words ill print */
 i = 0;
 while (i < n)
 {
-/* s is equal to the arguments in vl */
-/* s now represents the arguments while va_Arg iterates */
 s = va_arg(vl, char*);
-/* task condition */
-/* if one of the strings is NULL print (nil) */
 if (s == NULL)
 printf("(nil)");
 else
 printf("%s", s);
-if (i + 1 < n && separator != NULL)
+if (i < n - 1 && separator != NULL)
 printf("%s", separator);
 i++;
 }
