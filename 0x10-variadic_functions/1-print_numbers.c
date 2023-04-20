@@ -21,7 +21,7 @@ while (i < n)
 printf("%i", va_arg(vl, int));
 if (i + 1 != n && separator)
 {
-printf("%c", *separator);
+printf("%s", separator);
 }
 i++;
 }
