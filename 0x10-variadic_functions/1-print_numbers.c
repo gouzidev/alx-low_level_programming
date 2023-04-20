@@ -17,7 +17,7 @@ unsigned int i = 0;
 va_start(vl, n);
 while (i < n)
 {
-printf("%i" , va_arg(vl, int));
+printf("%i", va_arg(vl, int));
 if (i + 1 != n && separator)
 {
 printf("%c", *separator);
@@ -25,6 +25,6 @@ printf("%c", *separator);
 i++;
 }
 printf("\n");
-va_end(vl); 
+va_end(vl);
 }
 
