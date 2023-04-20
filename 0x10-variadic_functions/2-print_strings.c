@@ -22,12 +22,12 @@ while (i < n)
 {
 str = va_arg(vl, char*);
 if (str == NULL)
-printf("(nil)");
+	printf("(nil)");
 else
-printf("%s", str);
-if (separator != NULL && i + 1 < n)
-printf("%s", separator);
-i++;
+	printf("%s", str);
+if (separator != NULL && i < n - 1)
+	printf("%s", separator);
+	i++;
 }
 printf("\n");
 va_end(vl);
