@@ -11,25 +11,35 @@
  *
  * Return: void
  */
+
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-unsigned int i;
-va_list vl;
-char *str;
+	unsigned int runner;
+	va_list valist;
+	char *string;
 
-va_start(vl, n);
-i = 0;
-while (i < n)
-{
-str = va_arg(vl, char*);
-if (str == NULL)
-	printf("(nil)");
-else
-	printf("%s", str);
-if (separator != NULL && i < n - 1)
-	printf("%s", separator);
-	i++;
-}
-printf("\n");
-va_end(vl);
+	va_start(valist, n);
+	/* I run trough the string to know which are the words ill print */
+	for (runner = 0; runner < n; runner++)
+	{
+		/* string is equal to the arguments in valist */
+		/* string now represents the arguments while va_Arg iterates */
+		string = va_arg(valist, char*);
+		/* task condition */
+		/* if one of the strings is NULL print (nil) */
+		if (string == NULL)
+		{
+			printf("(nil)");
+		}
+		else
+		{
+			printf("%s", string);
+		}
+		if (runner + 1 < n && separator != NULL)
+		{
+			printf("%s", separator);
+		}
+	}
+	printf("\n");
+	va_end(valist);
 }
