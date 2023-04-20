@@ -15,7 +15,7 @@ va_list vl;
 unsigned int i;
 
 va_start(vl, n);
-i = 0
+i = 0;
 while (i < n)
 {
 printf("%i", va_arg(vl, int));
