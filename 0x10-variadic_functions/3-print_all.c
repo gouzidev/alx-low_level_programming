@@ -11,7 +11,7 @@
 void print_all(const char * const format, ...)
 {
 va_list valist;
-unsigned int i = 0, j;
+unsigned int i = 0, j, flag = 0;
 char *str;
 const char allowed[] = "cifs";
 
@@ -21,7 +21,7 @@ while (format && format[i])
 j = 0;
 while (allowed[j])
 {
-if (format[i] == allowed[j] && i != 0)
+if (format[i] == allowed[j] && flag == 1)
 {
 printf(", ");
 break;
@@ -30,17 +30,17 @@ break;
 switch (format[i])
 {
 case 'c':
-printf("%c", va_arg(valist, int));
+printf("%c", va_arg(valist, int)), flag = 1;
 break;
 case 'i':
-printf("%d", va_arg(valist, int));
+printf("%d", va_arg(valist, int)), flag = 1;
 break;
 case 'f':
-printf("%f", va_arg(valist, double));
+printf("%f", va_arg(valist, double)), flag = 1;
 break;
 case 's':
-str = va_arg(valist, char *);
-if (!str)
+str = va_arg(valist, char *), flag = 1;
+if (!str || str == NULL)
 {
 printf("(nil)");
 break;
