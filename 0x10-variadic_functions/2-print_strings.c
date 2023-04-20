@@ -27,17 +27,11 @@ s = va_arg(vl, char*);
 /* task condition */
 /* if one of the strings is NULL print (nil) */
 if (s == NULL)
-{
 printf("(nil)");
-}
 else
-{
 printf("%s", s);
-}
 if (i + 1 < n && separator != NULL)
-{
 printf("%s", separator);
-}
 i++;
 }
 printf("\n");
