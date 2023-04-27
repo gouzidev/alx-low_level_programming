@@ -15,7 +15,7 @@ size_t print_list(const list_t *h)
 {
 	int nodes_count = 0;
 	list_t const *curr = h;
-	
+
 	while (curr)
 	{
 		nodes_count++;
