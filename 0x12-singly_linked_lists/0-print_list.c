@@ -24,7 +24,7 @@ size_t print_list(const list_t *h)
 		}
 		else
 		{
-			printf("[%c] %s\n", '0', "(nil)");
+			printf("[%d] %s\n", 0, "(nil)");
 		}
 		curr = curr->next;
 		nodes_count++;
