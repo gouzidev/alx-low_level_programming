@@ -35,6 +35,5 @@ return (1);
 counter++;
 curr = curr->next;
 }
-free(*head);
 return (-1);
 }
