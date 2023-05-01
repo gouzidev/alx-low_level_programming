@@ -15,34 +15,31 @@ listint_t *new_node = malloc(sizeof(listint_t));
 listint_t *curr = *head;
 listint_t *prev = *head;
 
-if (new_node == NULL || *head == NULL)
-	return (NULL);
+if (new_node == NULL)
+return NULL;
 
 new_node->n = n;
-counter = 0;
+counter = 0; 
 
 /* if idx = 0 */
 if (idx == 0)
 {
-new_node->next = *head;
+new_node->next = *head; 
 *head = new_node;
 return (new_node);
 }
 /* else */
-else
-{
 while (counter < idx)
 {
 if (!curr)
 {
 return (NULL);
 }
+counter++;
 prev = curr;
 curr = curr->next;
-counter++;
 }
 prev->next = new_node;
 new_node->next = curr;
 return (new_node);
-}
 }
