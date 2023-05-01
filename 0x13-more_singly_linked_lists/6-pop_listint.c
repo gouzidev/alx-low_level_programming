@@ -9,18 +9,18 @@
 int pop_listint(listint_t **head)
 {
 	int n = 0;
-	listint_t *ptraux;
+	listint_t *next;
 
 	if (*head == NULL)
 		return (n);
 
 	n = (*head)->n;
 
-	ptraux = (*head)->next;
+	next = (*head)->next;
 
 	free(*head);
 
-	*head = ptraux;
+	*head = next;
 
 	return (n);
 }
