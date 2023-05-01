@@ -11,7 +11,7 @@ unsigned int counter = 0;
 listint_t *curr = *head;
 
 /* we have 0 nodes */
-if (head == NULL)
+if (*head == NULL)
 {
 return (-1);
 }
