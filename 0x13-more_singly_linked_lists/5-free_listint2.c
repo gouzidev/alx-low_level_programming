@@ -6,26 +6,19 @@
  * @head: double pointer to listint_t
  * Return: he address of the new element, or NULL if it failed
  */
-
 void free_listint2(listint_t **head)
 {
-listint_t *curr = *head;
-listint_t *next = *head;
-if (*head == NULL || head == NULL)
-{
-free(*head);
-*head = NULL;
+listint_t *temp;
+
+if (head == NULL || *head == NULL)
 return;
-}
-else
+
+while (*head != NULL)
 {
-while (curr->next)
-{
-next = curr->next;
-free(curr);
-curr = next;
+temp = *head;
+*head = (*head)->next;
+free(temp);
 }
-free(curr);
-}
+
 *head = NULL;
 }
