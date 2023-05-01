@@ -33,6 +33,10 @@ else
 {
 while (counter < idx)
 {
+if (!curr)
+{
+return (NULL);
+}
 prev = curr;
 curr = curr->next;
 counter++;
