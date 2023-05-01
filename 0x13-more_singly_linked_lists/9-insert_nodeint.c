@@ -41,6 +41,5 @@ curr = curr->next;
 }
 prev->next = new_node;
 new_node->next = curr;
-free(new_node);
 return (new_node);
 }
