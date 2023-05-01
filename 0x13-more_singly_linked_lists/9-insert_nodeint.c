@@ -16,30 +16,30 @@ listint_t *curr = *head;
 listint_t *prev = *head;
 
 if (new_node == NULL)
-return NULL;
+return (NULL);
 
 new_node->n = n;
-counter = 0; 
+counter = 0;
 
 /* if idx = 0 */
 if (idx == 0)
 {
-new_node->next = *head; 
+new_node->next = *head;
 *head = new_node;
 return (new_node);
 }
 /* else */
-while (counter < idx)
+while (curr != NULL && counter != idx - 1)
 {
-if (!curr)
-{
-return (NULL);
-}
 counter++;
-prev = curr;
 curr = curr->next;
 }
-prev->next = new_node;
-new_node->next = curr;
+if (counter == idx)
+{
+new_node->next = curr->next;
+curr->next = new_node;
 return (new_node);
+}
+free(new_node);
+return (NULL);
 }
