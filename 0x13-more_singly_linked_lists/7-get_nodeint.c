@@ -14,13 +14,11 @@ listint_t *node = head;
 if (head == NULL)
 	return (NULL);
 
-index = index + 1;
-
-while (node->next)
+while (node)
 {
 node = node->next;
 index--;
-if (index == 1)
+if (index == 0)
 {
 return (node);
 }
