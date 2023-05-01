@@ -25,6 +25,7 @@ next = curr->next;
 free(curr);
 curr = next;
 }
+free(next);
 free(curr);
 }
 *head = NULL;
