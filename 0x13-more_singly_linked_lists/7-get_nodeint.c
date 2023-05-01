@@ -10,13 +10,16 @@
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 listint_t *node = head;
+
+if (head == NULL)
+	return (NULL);
+
 index = index + 1;
 
 while (node->next)
 {
 node = node->next;
 index--;
-printf("index now is =>%d\n  and node is =>%d\n\n", index, node->n);
 if (index == 1)
 {
 return (node);
