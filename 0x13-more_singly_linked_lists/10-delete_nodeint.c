@@ -27,13 +27,14 @@ while (curr)
 {
 
 /* reached the element (one more to go)*/
-if (counter == index - 1)
+if (counter == index)
 {
 curr->next = curr->next->next;
 return (1);
 }
-counter++;
 curr = curr->next;
+counter++;
 }
+free(*head);
 return (-1);
 }
