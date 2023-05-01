@@ -16,12 +16,12 @@ if (head == NULL)
 
 while (node)
 {
-node = node->next;
-index--;
 if (index == 0)
 {
 return (node);
 }
+index--;
+node = node->next;
 }
 return (NULL);
 }
