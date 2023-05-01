@@ -7,34 +7,38 @@
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-unsigned int counter = 0;
-listint_t *curr = *head;
+unsigned int pos = 0;
+listint_t *node;
 
-/* we have 0 nodes */
+/* Special case: empty list */
 if (*head == NULL)
-{
 return (-1);
-}
 
-/* we have more */
+/* Special case: deleting the head node */
 if (index == 0)
 {
-*head = curr->next;
-free(curr);
+node = *head;
+*head = (*head)->next;
+free(node);
 return (1);
 }
-while (curr)
-{
 
-/* reached the element (one more to go)*/
-if (counter == index)
+/* Traverse the list until we find the node at the given index */
+while (*head && pos != index - 1)
 {
-curr->next = curr->next->next;
+pos++;
+head = &(*head)->next;
+}
+
+/* If we found the node, delete it */
+if (*head && (*head)->next != NULL)
+{
+node = (*head)->next;
+(*head)->next = (*head)->next->next;
+free(node);
 return (1);
 }
-curr = curr->next;
-counter++;
-}
-free(*head);
+
+/* Failed to find the node */
 return (-1);
 }
