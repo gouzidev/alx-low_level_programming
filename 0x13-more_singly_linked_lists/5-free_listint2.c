@@ -14,6 +14,7 @@ listint_t *next = *head;
 if (*head == NULL)
 {
 free(*head);
+*head = NULL;
 return;
 }
 else
