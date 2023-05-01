@@ -3,7 +3,7 @@
 /**
  * get_nodeint_at_index - frees a listint_t list and sets head to NULL.
  * @head: double pointer to the head of the listint_t list.
- * @i: double pointer to the head of the listint_t list.
+ * @index: double pointer to the head of the listint_t list.
  * Return: int
  */
 
