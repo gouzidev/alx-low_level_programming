@@ -3,32 +3,23 @@
 /**
  * pop_listint - frees a listint_t list and sets head to NULL.
  * @head: double pointer to the head of the listint_t list.
- * Return - int
+ * Retur: int
  */
 int pop_listint(listint_t **head)
 {
-int popped = 0;
-listint_t *temp;
+int n = 0;
+listint_t *next;
 
 if (*head == NULL)
 {
-return (popped);
+return (n);
 }
 else
 {
-popped = (*head)->n;
-/* one element */
-if ((*head)->next == NULL)
-{
-*head = NULL;
+n = (*head)->n;
+next = (*head)->next;
 free(*head);
+*head = next;
+return (n);
 }
-else
-{
-temp = (*head)->next;
-free(*head);
-*head = temp;
-}
-}
-return (popped);
 }
