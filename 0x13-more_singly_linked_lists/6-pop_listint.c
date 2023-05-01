@@ -3,23 +3,25 @@
 /**
  * pop_listint - frees a listint_t list and sets head to NULL.
  * @head: double pointer to the head of the listint_t list.
- * Retur: int
+ * Return: int
  */
+
 int pop_listint(listint_t **head)
 {
-int n = 0;
-listint_t *next;
-
-if (*head == NULL)
-{
-return (n);
-}
-else
-{
-n = (*head)->n;
-next = (*head)->next;
-free(*head);
-*head = next;
-return (n);
-}
+	int n = 0;
+	listint_t *ptraux;
+	/* task condition */
+	if (*head == NULL)
+		return (0);
+	/* n is equal to the head de reference to n from the structure */
+	/* that is the nodes data (n) that are integers */
+	n = (*head)->n;
+	/* head goes to the next node */
+	ptraux = (*head)->next;
+	/* frees head so the head node is deleted */
+	free(*head);
+	/* now ptraux is the new head node */
+	*head = ptraux;
+	/* return the head nodes data that is n according to the structure */
+	return (n);
 }
