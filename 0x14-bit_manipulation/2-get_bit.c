@@ -27,5 +27,7 @@ return (result);
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-return (n & power(2, index) ? 1 : 0);
+	if (index > 64)
+		return (-1);
+	return (n & power(2, index) ? 1 : 0);
 }
