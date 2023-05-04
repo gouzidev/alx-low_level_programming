@@ -31,5 +31,6 @@ if (index > 64)
 {
 return (-1);
 }
-return (*n = (*n | power(2, index)));
+*n = (*n | power(2, index));
+return (1);
 }
