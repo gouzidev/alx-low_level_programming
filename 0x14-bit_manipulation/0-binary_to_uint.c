@@ -6,7 +6,8 @@
  * Description: convert binary to decimal
  * Return: this return the convert number.
  */
-int power(int base, int exponent) {
+int power(int base, int exponent)
+{
 int result = 1;
 int i = 0;
 while (i < exponent)
