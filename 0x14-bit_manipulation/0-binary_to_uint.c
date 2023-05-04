@@ -9,11 +9,12 @@
 int power(int base, int exponent) {
 int result = 1;
 int i = 0;
-while (i < exponent) {
+while (i < exponent)
+{
 result *= base;
 i++;
 }
-return result;
+return (result);
 }
 /**
  * binary_to_uint - convert binary to decimal.
