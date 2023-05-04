@@ -7,14 +7,24 @@
  */
 void print_binary(unsigned long int n)
 {
-	if (n > 1)
-		print_binary(n >> 1);
-	if (n & 1)
-	{
-		putchar('1');
-	}
-	else
-	{
-		_putchar('0');
-	}
+int good = 0;
+unsigned long int m = 1UL << 63; /* start with MSB */
+
+if (n == 0)
+{
+_putchar('0');
+return;
+}
+
+while (m != 0)
+{
+if ((n & m) == 0 && good == 1)
+_putchar('0');
+if ((n & m) != 0)
+{
+_putchar('1');
+good = 1;
+}
+m = m >> 1; /* shift m right */
+}
 }
