@@ -18,12 +18,13 @@ if (filename == NULL)
 return (-1);
 }
 fd = open(filename, O_WRONLY | O_APPEND);
-if (text_content == NULL)
-{
 if (fd == -1)
 {
 return (-1);
 }
+if (text_content == NULL)
+{
+return (1);
 }
 i = 0;
 while (text_content[i])
