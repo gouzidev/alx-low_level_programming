@@ -23,7 +23,10 @@ if (fh == -1)
 return (-1);
 }
 
-_write_flag = write(fh, text_content, sizeof(text_content));
+if (text_content == NULL)
+{
+_write_flag = creat(filename, 00600);
+}
 
 if (_write_flag == -1)
 {
