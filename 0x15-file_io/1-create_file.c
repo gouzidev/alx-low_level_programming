@@ -16,7 +16,7 @@ if (filename == NULL)
 return (-1);
 }
 
-fh = open(filename, O_CREAT | O_WRONLY);
+fh = open(filename, O_CREAT | O_WRONLY, 0600);
 
 if (fh == -1)
 {
