@@ -27,7 +27,9 @@ _write_flag = write(fh, text_content, sizeof(text_content));
 
 if (_write_flag == -1)
 {
+close(fh);
 return (-1);
 }
+close(fh);
 return (1);
 }
