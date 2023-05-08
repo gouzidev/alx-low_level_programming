@@ -1,5 +1,10 @@
-#include "main.h"
-#include "holberton.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+
 /**
  * read_textfile - read a file.
  * @filename: the file to read.
@@ -8,38 +13,35 @@
  * section header: the header of this function is holberton.h
  * Return: this return the number of chars.
  */
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd, _read, _write;
-	char *buffer;
+char *buffer = malloc(sizeof(char) * letters);
+int fh;
+int bytes_read;
+int _write_flag;
 
-	if (filename == NULL)
-		return (0);
+if (filename == NULL)
+{
+return (0);
+}
 
-	buffer = malloc(sizeof(char) * letters);
-	if (buffer == NULL)
-		return (0);
+fh = open(filename, O_RDONLY);
 
-	fd = open(filename, O_RDONLY, 600);
-	if (fd == -1)
-	{
-		free(buffer);
-		return (0);
-	}
-	_read = read(fd, buffer, letters);
-	if (_read == -1)
-	{
-		free(buffer);
-		return (0);
-	}
+if (fh == -1)
+{
+return (0);
+}
 
-	_write = write(STDOUT_FILENO, buffer, _read);
-	if (_write == -1 || _write != _read)
-	{
-		return (0);
-	}
 
-	free(buffer);
-	close(fd);
-	return (_write);
+bytes_read = read(fh, buffer, letters);
+_write_flag = write(STDOUT_FILENO, buffer, bytes_read);
+if (_write_flag == -1 || _write_flag != bytes_read)
+{
+return (0);
+}
+
+close(fh);
+free(buffer);
+return (_write_flag);
 }
