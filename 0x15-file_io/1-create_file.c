@@ -10,6 +10,7 @@ int create_file(const char *filename, char *text_content)
 {
 int fh;
 int _write_flag;
+int i;
 
 if (filename == NULL)
 {
@@ -23,9 +24,14 @@ if (fh == -1)
 return (-1);
 }
 
-if (text_content == NULL)
+if (text_content != NULL)
 {
-_write_flag = creat(filename, 00600);
+i = 0;
+while (text_content[i])
+{
+i++;
+}
+_write_flag = write(fh, text_content, i);
 }
 
 if (_write_flag == -1)
