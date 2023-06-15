@@ -15,12 +15,12 @@ dlistint_t *next = head;
 
 if (head != NULL)
 {
-    while (curr->next)
-    {
-        next = curr->next;
-        free(curr);
-        curr = next;
-    }
-    free(curr);
+while (curr->next)
+{
+next = curr->next;
+free(curr);
+curr = next;
+}
+free(curr);
 }
 }
