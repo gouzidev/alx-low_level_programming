@@ -37,7 +37,7 @@ while ((*head)->next)
 (*head)->next = new;
 new->prev = *head;
 *head = first;
+return (new);
 }
-
 return (new);
 }
