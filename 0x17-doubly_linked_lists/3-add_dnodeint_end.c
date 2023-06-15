@@ -16,15 +16,16 @@ dlistint_t *first = *head;
 new->next = NULL;
 new->prev = NULL;
 new->n = n;
-
+if (new == NULL)
+{
+return (NULL);
+}
 if (*head == NULL)
 {
 *head = new;
 return (new);
 }
 
-else
-{
 while ((*head)->next)
 {
 *head = (*head)->next;
@@ -32,6 +33,5 @@ while ((*head)->next)
 (*head)->next = new;
 new->prev = *head;
 *head = first;
-}
 return (new);
 }
