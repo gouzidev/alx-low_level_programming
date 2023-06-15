@@ -15,31 +15,20 @@ dlistint_t *new = malloc(sizeof(dlistint_t));
 dlistint_t *curr = *head;
 
 new->n = n;
-
-if (*head == NULL)
-{
-*head = new;
-(*head)->next = NULL;
-(*head)->prev = NULL;
-return (*head);
-}
-else if ((*head)->next == NULL)
-{
-(*head)->next = new;
 new->next = NULL;
-new->prev = *head;
-return (*head);
-}
-else
-{
-while ((*head)->next)
-{
-*head = (*head)->next;
-}
-(*head)->next = new;
-new->prev = *head;
-*head = curr;
-}
+new->prev = NULL;
 
+if (curr == NULL)
+{
+    curr = new;
+}
+if (curr == NULL)
+{
+    printf("curr stilll nul\n");
+}
+else {
+
+    printf("GOODDODO D\n");
+}
 return (new);
 }
