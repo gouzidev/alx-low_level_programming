@@ -21,6 +21,7 @@ if (*head == NULL)
 *head = new;
 (*head)->next = NULL;
 (*head)->prev = NULL;
+return (*head);
 }
 else if ((*head)->next == NULL)
 {
