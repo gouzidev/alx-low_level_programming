@@ -22,6 +22,5 @@ if (head != NULL)
         curr = next;
     }
     free(curr);
-    free(next);
 }
 }
