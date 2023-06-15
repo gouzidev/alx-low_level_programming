@@ -28,6 +28,7 @@ else if ((*head)->next == NULL)
 (*head)->next = new;
 new->next = NULL;
 new->prev = *head;
+return (*head);
 }
 else
 {
