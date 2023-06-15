@@ -19,19 +19,19 @@ new->n = n;
 
 if (*head == NULL)
 {
-    *head = new;
-    return (new);
+*head = new;
+return (new);
 }
 
 else
 {
-    while ((*head)->next)
-    {
-        *head = (*head)->next;
-    }
-    (*head)->next = new;
-    new->prev = *head;
-    *head = first;
+while ((*head)->next)
+{
+*head = (*head)->next;
+}
+(*head)->next = new;
+new->prev = *head;
+*head = first;
 }
 return (new);
 }
