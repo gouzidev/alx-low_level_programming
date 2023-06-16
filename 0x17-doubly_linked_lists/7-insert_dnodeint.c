@@ -44,6 +44,5 @@ return (new);
 curr = curr->next;
 i++;
 }
-free(new);
 return (NULL);
 }
