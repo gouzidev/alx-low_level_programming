@@ -35,14 +35,11 @@ prev = curr->prev;
 if (curr->next == NULL)
 {
 prev->next = NULL;
-free(curr);
 return (1);
 }
 curr->next->prev = prev;
 prev->next = curr->next;
-free(curr);
 return (1);
-
 }
 i++;
 curr = curr->next;
