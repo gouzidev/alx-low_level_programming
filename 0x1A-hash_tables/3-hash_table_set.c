@@ -39,7 +39,7 @@ if (!existing_node)
 ht->array[hash_idx] = new_node;
 else
 {
-existing_node->next = new_node;
+new_node->next = existing_node;
 existing_node = new_node;
 }
 new_node->next = NULL;
