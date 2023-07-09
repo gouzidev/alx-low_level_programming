@@ -23,9 +23,12 @@ if (new_node == NULL)
 return (0);
 
 new_node->key = malloc(sizeof(new_node->key));
+if (new_node->key == NULL)
+return (0);
 new_node->value = malloc(sizeof(new_node->value));
+if (new_node->value == NULL)
+return (0);
 new_node->next = malloc(sizeof(new_node->next));
-
 strcpy(new_node->key, key);
 strcpy(new_node->value, value);
 
@@ -36,9 +39,7 @@ return (0);
 hash_idx = key_index((const unsigned char *) key, ht->size);
 existing_node = ht->array[hash_idx];
 if (!existing_node)
-{
 ht->array[hash_idx] = new_node;
-}
 else
 {
 while (existing_node->next)
