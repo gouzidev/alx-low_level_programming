@@ -15,7 +15,7 @@ unsigned int hash_idx;
 hash_node_t *existing_node;
 hash_node_t *new_node;
 
-if (key == "" || key == NULL)
+if (strcmp(key, "") == 0 || key == NULL)
 return (0);
 
 new_node = malloc(sizeof(hash_node_t));
@@ -33,7 +33,7 @@ existing_node = malloc(sizeof(hash_node_t));
 if (existing_node == NULL)
 return (0);
 
-hash_idx = key_index(key, ht->size);
+hash_idx = key_index((const unsigned char *) key, ht->size);
 existing_node = ht->array[hash_idx];
 if (!existing_node)
 {
