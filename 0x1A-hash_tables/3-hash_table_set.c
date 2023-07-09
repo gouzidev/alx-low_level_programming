@@ -33,7 +33,7 @@ existing_node = malloc(sizeof(hash_node_t));
 if (existing_node == NULL)
 return (0);
 
-hash_idx = key_index((const unsigned char*) key, ht->size);
+hash_idx = key_index((const unsigned char *) key, ht->size);
 existing_node = ht->array[hash_idx];
 if (!existing_node)
 ht->array[hash_idx] = new_node;
