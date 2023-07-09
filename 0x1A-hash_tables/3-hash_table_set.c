@@ -11,37 +11,39 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-unsigned int hash_idx;
-hash_node_t *existing_node;
-hash_node_t *new_node;
+hash_node_t *node;
+hash_node_t *curr;
+unsigned int idx = key_index((const unsigned char *) key, ht->size);
 
 if (strcmp(key, "") == 0 || key == NULL)
 return (0);
-
-new_node = malloc(sizeof(hash_node_t));
-if (new_node == NULL)
+node = malloc(sizeof(hash_node_t));
+if (node == NULL)
 return (0);
 
-new_node->key = malloc(sizeof(new_node->key));
-new_node->value = malloc(sizeof(new_node->value));
-new_node->next = malloc(sizeof(new_node->next));
+node->key = (char *) key;
+node->value = (char *) value;
+node->next = NULL;
 
-strcpy(new_node->key, key);
-strcpy(new_node->value, value);
-
-existing_node = malloc(sizeof(hash_node_t));
-if (existing_node == NULL)
-return (0);
-
-hash_idx = key_index((const unsigned char *) key, ht->size);
-existing_node = ht->array[hash_idx];
-if (!existing_node)
-ht->array[hash_idx] = new_node;
+if (ht->array[idx] == NULL)
+{
+ht->array[idx] = node;
+}
 else
 {
-new_node->next = existing_node;
-existing_node = new_node;
+curr = ht->array[idx];
+printf("1 curr key + val => %s , %s\n", curr->key, curr->value);
+while (curr)
+{
+if (strcmp(curr->key, key) == 0)
+{
+curr->value = (char *) value;
+return (1);
 }
-new_node->next = NULL;
+curr = curr->next;
+}
+node->next = ht->array[idx];
+ht->array[idx] = node;
+}
 return (1);
 }
